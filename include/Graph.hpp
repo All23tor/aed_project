@@ -1,6 +1,6 @@
 #pragma once
-#include "MyVector.hpp"
-#include "pair.hpp"
+#include "Pair.hpp"
+#include "Vector.hpp"
 #include "raylib-cpp.hpp"
 
 struct Node {
@@ -32,14 +32,14 @@ public:
   void addNode(int id, float x, float y);
   bool addEdge(int sourceId, int targetId, float weight);
   const Node& getNode(int id) const;
-  const MyVector<Pair<int, float>>& getAdjacentNodes(int id) const;
+  const Vector<Pair<int, float>>& getAdjacentNodes(int id) const;
   int getNumNodes() const;
   int findNodeAtPosition(const raylib::Vector2& clickPos, float radius) const;
   void generateRandomNodes(int count, int maxWidth, int maxHeight,
                            int maxEdgesPerNode, float maxConnectionDistance);
 
   void generateRandomObstacles(int count, int maxWidth, int maxHeight);
-  const MyVector<Obstacle>& getObstacles() const; // salida de los obstaculos
+  const Vector<Obstacle>& getObstacles() const; // salida de los obstaculos
 
   void clear();
   void addObstacle(const Obstacle& obs);
@@ -48,12 +48,12 @@ public:
   size_t getEstimatedMemoryUsage() const;
 
 private:
-  MyVector<Node> nodes;
-  MyVector<MyVector<Pair<int, float>>> adjacencyList;
+  Vector<Node> nodes;
+  Vector<Vector<Pair<int, float>>> adjacencyList;
   bool isValidNodeId(int id) const;
-  MyVector<Obstacle> obstacles;
+  Vector<Obstacle> obstacles;
 
-  MyVector<MyVector<MyVector<int>>> spatialGrid;
+  Vector<Vector<Vector<int>>> spatialGrid;
   int gridCols;
   int gridRows;
 

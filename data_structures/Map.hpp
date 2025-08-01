@@ -1,12 +1,12 @@
 #pragma once
 
-#include "MyVector.hpp"
-#include "pair.hpp"
+#include "Pair.hpp"
+#include "Vector.hpp"
 
 template <typename K, typename V>
 class SimpleMap {
 private:
-  MyVector<Pair<K, V>> data;
+  Vector<Pair<K, V>> data;
 
   int lower_bound(const K& key) const {
     int l = 0, r = data.size();

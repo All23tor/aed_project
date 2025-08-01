@@ -1,9 +1,7 @@
 #include "Pathfinding.hpp"
-#include "MyVector.hpp"
-#include "SimpleMap.hpp"
+#include "Map.hpp"
+#include "Queue.hpp"
 #include "Utils.hpp"
-#include "pair.hpp"
-#include "queue.hpp"
 
 namespace {
 float calculateHeuristic(const Graph& graph, int nodeId1, int nodeId2) {
@@ -43,9 +41,9 @@ List<int> Pathfinding::findPath(const Graph& graph, int startNodeId,
   }
 
   // Reiniciar estructuras internas
-  MyVector<float> gScore(numNodes, std::numeric_limits<float>::infinity());
-  MyVector<float> fScore(numNodes, std::numeric_limits<float>::infinity());
-  MyVector<bool> closedSet(numNodes, false);
+  Vector<float> gScore(numNodes, std::numeric_limits<float>::infinity());
+  Vector<float> fScore(numNodes, std::numeric_limits<float>::infinity());
+  Vector<bool> closedSet(numNodes, false);
   SimpleMap<int, int> cameFrom;
   PriorityQueue<Pair<float, int>> openSet;
 

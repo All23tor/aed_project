@@ -1,6 +1,5 @@
 #include "Graph.hpp"
-#include "MyVector.hpp"
-#include "pair.hpp"
+#include "Vector.hpp"
 #include <iostream>
 
 Graph::Graph() : gridCols(0), gridRows(0) {}
@@ -58,11 +57,11 @@ const Node& Graph::getNode(int id) const {
 }
 
 // Obtiene la lista de nodos adyacentes a un nodo dado
-const MyVector<Pair<int, float>>& Graph::getAdjacentNodes(int id) const {
+const Vector<Pair<int, float>>& Graph::getAdjacentNodes(int id) const {
   if (!isValidNodeId(id)) {
     // std::cerr << "Error: ID de nodo invalido al obtener adyacentes: " << id
     // << std::endl;
-    static const MyVector<Pair<int, float>>
+    static const Vector<Pair<int, float>>
         emptyList; // Lista vacía para IDs inválidos
     return emptyList;
   }
@@ -145,7 +144,7 @@ void Graph::generateRandomNodes(int count, int maxWidth, int maxHeight,
         if (!isValidGridCell(neighborCellX, neighborCellY))
           continue;
 
-        const MyVector<int>& neighborNodes =
+        const Vector<int>& neighborNodes =
             spatialGrid[neighborCellY][neighborCellX];
         for (size_t k = 0;
              k < neighborNodes.size() && edgesConnected < maxEdgesPerNode;
@@ -209,7 +208,7 @@ void Graph::generateRandomObstacles(int count, int maxWidth, int maxHeight) {
   std::cout << "Obstaculos aleatorios generados." << std::endl;
 }
 
-const MyVector<Obstacle>& Graph::getObstacles() const {
+const Vector<Obstacle>& Graph::getObstacles() const {
   return obstacles;
 }
 
@@ -243,16 +242,16 @@ size_t Graph::getEstimatedMemoryUsage() const {
 
   total_memory += nodes.capacity() * sizeof(Node);
 
-  total_memory += adjacencyList.capacity() * sizeof(MyVector<Pair<int, float>>);
+  total_memory += adjacencyList.capacity() * sizeof(Vector<Pair<int, float>>);
   for (size_t i = 0; i < adjacencyList.size(); ++i) {
     total_memory += adjacencyList[i].capacity() * sizeof(Pair<int, float>);
   }
 
   total_memory += obstacles.capacity() * sizeof(Obstacle);
 
-  total_memory += spatialGrid.capacity() * sizeof(MyVector<MyVector<int>>);
+  total_memory += spatialGrid.capacity() * sizeof(Vector<Vector<int>>);
   for (size_t r = 0; r < spatialGrid.size(); ++r) {
-    total_memory += spatialGrid[r].capacity() * sizeof(MyVector<int>);
+    total_memory += spatialGrid[r].capacity() * sizeof(Vector<int>);
     for (size_t c = 0; c < spatialGrid[r].size(); ++c) {
       total_memory += spatialGrid[r][c].capacity() * sizeof(int);
     }

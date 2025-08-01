@@ -6,7 +6,7 @@
 #include <utility>
 
 template <typename T>
-class MyVector {
+class Vector {
   T* data;
   size_t sz;
   size_t cap;
@@ -30,9 +30,9 @@ class MyVector {
   }
 
 public:
-  MyVector() : data(nullptr), sz(0), cap(0) {}
+  Vector() : data(nullptr), sz(0), cap(0) {}
 
-  MyVector(int n, const T& value) : data(nullptr), sz(0), cap(0) {
+  Vector(int n, const T& value) : data(nullptr), sz(0), cap(0) {
     if (n > 0) {
       data = new T[n];
       for (int i = 0; i < n; ++i) {
@@ -56,11 +56,11 @@ public:
     sz = n;
   }
 
-  ~MyVector() {
+  ~Vector() {
     delete[] data;
   }
 
-  MyVector(const MyVector& other) : data(nullptr), sz(0), cap(0) {
+  Vector(const Vector& other) : data(nullptr), sz(0), cap(0) {
     reallocate(other.sz);
     sz = other.sz;
     for (size_t i = 0; i < sz; ++i) {
@@ -68,7 +68,7 @@ public:
     }
   }
 
-  MyVector& operator=(const MyVector& other) {
+  Vector& operator=(const Vector& other) {
     if (this != &other) {
       delete[] data;
       data = nullptr;
@@ -83,7 +83,7 @@ public:
     return *this;
   }
 
-  MyVector(MyVector&& other) noexcept :
+  Vector(Vector&& other) noexcept :
       data(other.data),
       sz(other.sz),
       cap(other.cap) {
@@ -92,7 +92,7 @@ public:
     other.cap = 0;
   }
 
-  MyVector& operator=(MyVector&& other) noexcept {
+  Vector& operator=(Vector&& other) noexcept {
     if (this != &other) {
       delete[] data;
       data = other.data;
@@ -228,7 +228,7 @@ public:
     ++sz;
   }
 
-  void swap(MyVector& other) noexcept {
+  void swap(Vector& other) noexcept {
     std::swap(data, other.data);
     std::swap(sz, other.sz);
     std::swap(cap, other.cap);

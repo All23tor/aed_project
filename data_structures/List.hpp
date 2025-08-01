@@ -4,7 +4,7 @@
 #include <iterator> // std::forward_iterator_tag
 
 template <typename T>
-class SimpleList {
+class List {
 private:
   struct Node {
     T data;
@@ -17,14 +17,14 @@ private:
   size_t count;
 
 public:
-  SimpleList() : head(nullptr), tail(nullptr), count(0) {}
+  List() : head(nullptr), tail(nullptr), count(0) {}
 
   // Evitamos copias
-  SimpleList(const SimpleList&) = delete;
-  SimpleList& operator=(const SimpleList&) = delete;
+  List(const List&) = delete;
+  List& operator=(const List&) = delete;
 
   // Constructor por movimiento
-  SimpleList(SimpleList&& other) noexcept :
+  List(List&& other) noexcept :
       head(other.head),
       tail(other.tail),
       count(other.count) {
@@ -33,7 +33,7 @@ public:
   }
 
   // Operador de asignación por movimiento
-  SimpleList& operator=(SimpleList&& other) noexcept {
+  List& operator=(List&& other) noexcept {
     if (this != &other) {
       clear();
 
@@ -47,7 +47,7 @@ public:
     return *this;
   }
 
-  ~SimpleList() {
+  ~List() {
     clear();
   }
 
