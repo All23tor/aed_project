@@ -5,37 +5,52 @@
 #include "pair.hpp"
 #include "queue.hpp"
 
-Pathfinding::Pathfinding(const Graph& g) : graph(g) {
-  int n = g.getNumNodes();
-  gScore.resize(n, std::numeric_limits<float>::infinity());
-  fScore.resize(n, std::numeric_limits<float>::infinity());
-  closedSet.resize(n, false);
-}
-
-float Pathfinding::calculateHeuristic(int nodeId1, int nodeId2) const {
+namespace {
+float calculateHeuristic(const Graph& graph, int nodeId1, int nodeId2) {
   const Node& n1 = graph.getNode(nodeId1);
   const Node& n2 = graph.getNode(nodeId2);
   return Vector2Distance(n1.position, n2.position);
 }
 
-SimpleList<int> Pathfinding::findPath(int startNodeId, int endNodeId) {
-  int numNodes = graph.getNumNodes();
+SimpleList<int> reconstructPath(const Graph& graph,
+                                SimpleMap<int, int> cameFrom, int currentId) {
+  auto it = cameFrom.find(currentId);
+  if (!it) {
+    std::cout << "No se puede reconstruir el camino desde nodo " << currentId
+              << ".\n";
+    return {};
+  }
 
+  SimpleList<int> totalPath;
+  while (true) {
+    totalPath.push_front(currentId);
+    auto it = cameFrom.find(currentId);
+    if (!it || *it == -1)
+      break;
+    currentId = *it;
+  }
+
+  return totalPath;
+}
+} // namespace
+
+SimpleList<int> Pathfinding::findPath(const Graph& graph, int startNodeId,
+                                      int endNodeId) {
+  int numNodes = graph.getNumNodes();
   if (startNodeId < 0 || startNodeId >= numNodes || endNodeId < 0 ||
       endNodeId >= numNodes) {
     return {};
   }
 
   // Reiniciar estructuras internas
-  gScore = MyVector<float>(numNodes, std::numeric_limits<float>::infinity());
-  fScore = MyVector<float>(numNodes, std::numeric_limits<float>::infinity());
-  closedSet = MyVector<bool>(numNodes, false);
-  cameFrom.clear();
-
+  MyVector<float> gScore(numNodes, std::numeric_limits<float>::infinity());
+  MyVector<float> fScore(numNodes, std::numeric_limits<float>::infinity());
+  MyVector<bool> closedSet(numNodes, false);
+  SimpleMap<int, int> cameFrom;
   PriorityQueue<Pair<float, int>> openSet;
 
   gScore[startNodeId] = 0;
-  fScore[startNodeId] = calculateHeuristic(startNodeId, endNodeId);
+  fScore[startNodeId] = calculateHeuristic(graph, startNodeId, endNodeId);
   openSet.push({fScore[startNodeId], startNodeId});
 
   while (!openSet.empty()) {
@@ -43,7 +58,7 @@ SimpleList<int> Pathfinding::findPath(int startNodeId, int endNodeId) {
     openSet.pop();
 
     if (currentId == endNodeId) {
-      return reconstructPath(currentId);
+      return reconstructPath(graph, cameFrom, currentId);
     }
 
     if (closedSet[currentId]) {
@@ -78,40 +93,14 @@ SimpleList<int> Pathfinding::findPath(int startNodeId, int endNodeId) {
       float tentative_gScore = gScore[currentId] + edgeCost;
 
       if (tentative_gScore < gScore[neighborId]) {
-        cameFrom.set(neighborId, currentId);
+        cameFrom.insert(neighborId, currentId);
         gScore[neighborId] = tentative_gScore;
         fScore[neighborId] =
-            tentative_gScore + calculateHeuristic(neighborId, endNodeId);
+            tentative_gScore + calculateHeuristic(graph, neighborId, endNodeId);
         openSet.push({fScore[neighborId], neighborId});
       }
     }
   }
 
   return {}; // Camino no encontrado
-}
-
-SimpleList<int> Pathfinding::reconstructPath(int currentId) const {
-  if (!cameFrom.contains(currentId)) {
-    std::cout << "No se puede reconstruir el camino desde nodo " << currentId
-              << ".\n";
-    return {};
-  }
-
-  MyVector<int> temp;
-  while (true) {
-    temp.push_back(currentId);
-    if (!cameFrom.contains(currentId))
-      break;
-    int prev = cameFrom.get(currentId);
-    if (prev == -1)
-      break;
-    currentId = prev;
-  }
-
-  SimpleList<int> totalPath;
-  for (int i = temp.size() - 1; i >= 0; --i) {
-    totalPath.push_back(temp[i]);
-  }
-
-  return totalPath;
 }

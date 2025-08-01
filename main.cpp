@@ -18,7 +18,6 @@ const float MAX_CONNECTION_DISTANCE_GENERATION =
 const int NUM_OBSTACLES = 5;
 
 Graph myGraph;
-Pathfinding* myPathfinding = nullptr;
 int startNodeId = -1;
 int endNodeId = -1;
 SimpleList<int> path;
@@ -154,9 +153,6 @@ void InitializeApplication(int numNodes) {
     }
     std::cout << "----------------------------" << std::endl;
   }
-
-  // Inicializar el objeto Pathfinding con el grafo generado
-  myPathfinding = new Pathfinding(myGraph);
 }
 
 // Actualiza la lógica del juego (principalmente manejo de entrada en modo
@@ -356,7 +352,7 @@ void HandleGraphicalInput() {
         obstacleNameInput[0] = '\0'; // Limpiar el buffer
         // Recalcular la ruta si ya hay inicio y fin seleccionados
         if (startNodeId != -1 && endNodeId != -1) {
-          path = myPathfinding->findPath(startNodeId, endNodeId);
+          path = Pathfinding::findPath(myGraph, startNodeId, endNodeId);
         }
       }
     }
@@ -380,7 +376,7 @@ void HandleGraphicalInput() {
           myGraph.removeObstacle(i);
           // Recalcular la ruta si ya hay inicio y fin seleccionados
           if (startNodeId != -1 && endNodeId != -1) {
-            path = myPathfinding->findPath(startNodeId, endNodeId);
+            path = Pathfinding::findPath(myGraph, startNodeId, endNodeId);
           }
           break; // Solo elimina un obstáculo por clic
         }
@@ -407,7 +403,7 @@ void HandleGraphicalInput() {
           // inicio)
           endNodeId = clickedNodeId;
           // Si ambos nodos (inicio y fin) están seleccionados, calcular la ruta
-          path = myPathfinding->findPath(startNodeId, endNodeId);
+          path = Pathfinding::findPath(myGraph, startNodeId, endNodeId);
         } else {
           // Si ya hay inicio y fin, el siguiente clic resetea y selecciona un
           // nuevo inicio
@@ -421,7 +417,7 @@ void HandleGraphicalInput() {
     // Recalcular la ruta con la tecla 'R'
     if (IsKeyPressed(KEY_R)) {
       if (startNodeId != -1 && endNodeId != -1) {
-        path = myPathfinding->findPath(startNodeId, endNodeId);
+        path = Pathfinding::findPath(myGraph, startNodeId, endNodeId);
       }
     }
 
@@ -561,7 +557,8 @@ void RunTerminalMode() {
       std::cout << "Buscando ruta de " << sNode << " a " << eNode << "..."
                 << std::endl;
       auto startTime = std::chrono::high_resolution_clock::now();
-      SimpleList<int> terminalPath = myPathfinding->findPath(sNode, eNode);
+      SimpleList<int> terminalPath =
+          Pathfinding::findPath(myGraph, sNode, eNode);
       auto endTime = std::chrono::high_resolution_clock::now();
       std::chrono::duration<double> elapsed = endTime - startTime;
 
@@ -641,10 +638,6 @@ void PrintPathToTerminal(const SimpleList<int>& p) {
 void CleanupApplication() {
   if (graphicalMode) {
     CloseWindow(); // Cierra la ventana de Raylib
-  }
-  if (myPathfinding) {
-    delete myPathfinding; // Libera la memoria del objeto Pathfinding
-    myPathfinding = nullptr;
   }
   myGraph.clear(); // Limpia el grafo (opcional, pero buena práctica)
   std::cout << "Recursos liberados. Adios!" << std::endl;

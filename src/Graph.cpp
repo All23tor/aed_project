@@ -172,6 +172,15 @@ void Graph::generateRandomNodes(int count, int maxWidth, int maxHeight,
   std::cout << "Grafo generado y conectado con " << nodes.size() << " nodos."
             << std::endl;
 }
+
+// Nombres predefinidos para los obstáculos aleatorios
+static constexpr std::string_view obstacleNames[] = {
+    "Rio",      "Pared",          "Lago",        "Montana",
+    "Barranco", "Zona Prohibida", "Bosque Denso"};
+
+static constexpr Color obstacleColors[] = {BLUE,   DARKGREEN, BROWN, GRAY,
+                                           MAROON, VIOLET,    LIME};
+
 // --- FUNCIONES PARA OBSTÁCULOS (ahora usando Obstacle struct) ---
 void Graph::generateRandomObstacles(int count, int maxWidth, int maxHeight) {
   obstacles.clear();
@@ -179,17 +188,6 @@ void Graph::generateRandomObstacles(int count, int maxWidth, int maxHeight) {
 
   std::cout << "Generando " << count << " obstaculos aleatorios..."
             << std::endl;
-  // Nombres predefinidos para los obstáculos aleatorios
-  static const std::string obstacleNames_array[] = {
-      "Rio",      "Pared",          "Lago",        "Montana",
-      "Barranco", "Zona Prohibida", "Bosque Denso"};
-  MyVector<std::string> obstacleNames(my_initializer_list<std::string>(
-      obstacleNames_array, sizeof(obstacleNames_array) / sizeof(std::string)));
-
-  static const Color obstacleColors_array[] = {BLUE,   DARKGREEN, BROWN, GRAY,
-                                               MAROON, VIOLET,    LIME};
-  MyVector<Color> obstacleColors(my_initializer_list<Color>(
-      obstacleColors_array, sizeof(obstacleColors_array) / sizeof(Color)));
 
   for (int i = 0; i < count; ++i) {
     int minSize = 30;
@@ -200,15 +198,14 @@ void Graph::generateRandomObstacles(int count, int maxWidth, int maxHeight) {
     int x = GetRandomValue(0, maxWidth - width);
     int y = GetRandomValue(0, maxHeight - height);
 
-    Rectangle rect = {(float)x, (float)y, (float)width, (float)height};
-    std::string name =
-        obstacleNames[GetRandomValue(0, obstacleNames.size() - 1)];
-    Color color = obstacleColors[GetRandomValue(0, obstacleColors.size() - 1)];
-
-    // Usamos emplace_back para construir el objeto Obstacle directamente en el
-    // vector
+    Rectangle rect{(float)x, (float)y, (float)width, (float)height};
+    std::string name{
+        obstacleNames[GetRandomValue(0, std::size(obstacleNames) - 1)]};
+    Color color =
+        obstacleColors[GetRandomValue(0, std::size(obstacleColors) - 1)];
     obstacles.emplace_back(rect, name, color);
   }
+
   std::cout << "Obstaculos aleatorios generados." << std::endl;
 }
 

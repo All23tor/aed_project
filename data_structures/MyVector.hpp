@@ -1,15 +1,12 @@
 #ifndef MY_VECTOR_H
 #define MY_VECTOR_H
 
-#include "initializer_list.hpp"
-#include <algorithm>
 #include <cstddef>
 #include <stdexcept>
 #include <utility>
 
 template <typename T>
 class MyVector {
-private:
   T* data;
   size_t sz;
   size_t cap;
@@ -34,17 +31,6 @@ private:
 
 public:
   MyVector() : data(nullptr), sz(0), cap(0) {}
-
-  MyVector(my_initializer_list<T> init) : data(nullptr), sz(0), cap(0) {
-    if (init.size() > 0) {
-      reallocate(init.size());
-      sz = init.size();
-      size_t i = 0;
-      for (const T& val : init) {
-        data[i++] = val;
-      }
-    }
-  }
 
   MyVector(int n, const T& value) : data(nullptr), sz(0), cap(0) {
     if (n > 0) {

@@ -62,6 +62,15 @@ public:
     ++count;
   }
 
+  void push_front(const T& v) {
+    Node* newNode = new Node(v);
+    newNode->sgte = head;
+    head = newNode;
+    if (!tail)
+      tail = newNode;
+    ++count;
+  }
+
   void clear() {
     Node* current = head;
     while (current) {
@@ -79,14 +88,6 @@ public:
 
   size_t size() const {
     return count;
-  }
-
-  void debug_print() const {
-    std::cout << "SimpleList (size: " << count << "): ";
-    for (auto it = begin(); it != end(); ++it) {
-      std::cout << *it << " ";
-    }
-    std::cout << "\n";
   }
 
   class Iterator {
