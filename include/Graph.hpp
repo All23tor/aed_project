@@ -1,9 +1,28 @@
 #pragma once
 #include "MyVector.hpp"
-#include "Node.hpp"
-#include "Obstacle.hpp"
 #include "pair.hpp"
 #include "raylib-cpp.hpp"
+
+struct Node {
+  int id;
+  raylib::Vector2 position;
+
+  Node(int id, float x, float y) : id(id), position(raylib::Vector2{x, y}) {}
+  Node() : id(-1), position(raylib::Vector2(0.0f, 0.0f)) {}
+};
+
+struct Obstacle {
+  raylib::Rectangle rect;
+  std::string name;
+  raylib::Color color;
+
+  Obstacle() : rect{0, 0, 0, 0}, name(""), color(DARKBLUE) {}
+  Obstacle(raylib::Rectangle r, const std::string& n,
+           raylib::Color c = DARKBLUE) :
+      rect(r),
+      name(n),
+      color(c) {}
+};
 
 // Clase que representa el grafo
 class Graph {
