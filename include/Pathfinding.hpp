@@ -1,8 +1,8 @@
 #pragma once
 
 #include "Graph.hpp"
-#include "list.hpp"
+#include "List.hpp"
 
 namespace Pathfinding {
-SimpleList<int> findPath(const Graph&, int startNodeId, int endNodeId);
+List<int> findPath(const Graph&, int startNodeId, int endNodeId);
 }

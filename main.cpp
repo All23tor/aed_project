@@ -1,6 +1,5 @@
 #include "Graph.hpp"
 #include "Pathfinding.hpp"
-#include "list.hpp"
 #include <algorithm>
 #include <chrono>
 #include <cstring>
@@ -20,7 +19,7 @@ const int NUM_OBSTACLES = 5;
 Graph myGraph;
 int startNodeId = -1;
 int endNodeId = -1;
-SimpleList<int> path;
+List<int> path;
 
 raylib::Camera2D camera;
 
@@ -43,12 +42,12 @@ void CleanupApplication();
 // Funciones específicas del modo gráfico
 void HandleGraphicalInput();
 void DrawGraphicalHUD();
-void DrawGraphElements(const Graph& graph, const SimpleList<int>& pathNodes,
+void DrawGraphElements(const Graph& graph, const List<int>& pathNodes,
                        int startNodeId, int endNodeId);
 
 // Funciones específicas del modo terminal
 void RunTerminalMode();
-void PrintPathToTerminal(const SimpleList<int>& p);
+void PrintPathToTerminal(const List<int>& p);
 int GetValidNodeIdFromUser(const std::string& prompt, int maxId);
 
 // --- Implementación de main ---
@@ -430,7 +429,7 @@ void HandleGraphicalInput() {
 }
 
 // Esta función está separada de DrawApplication para mantener la modularidad
-void DrawGraphElements(const Graph& graph, const SimpleList<int>& pathNodes,
+void DrawGraphElements(const Graph& graph, const List<int>& pathNodes,
                        int startNodeId, int endNodeId) {
   if (graph.getNumNodes() <= GRAPHICAL_NODE_LIMIT) {
     // Dibujar todas las aristas
@@ -557,8 +556,7 @@ void RunTerminalMode() {
       std::cout << "Buscando ruta de " << sNode << " a " << eNode << "..."
                 << std::endl;
       auto startTime = std::chrono::high_resolution_clock::now();
-      SimpleList<int> terminalPath =
-          Pathfinding::findPath(myGraph, sNode, eNode);
+      List<int> terminalPath = Pathfinding::findPath(myGraph, sNode, eNode);
       auto endTime = std::chrono::high_resolution_clock::now();
       std::chrono::duration<double> elapsed = endTime - startTime;
 
@@ -617,7 +615,7 @@ int GetValidNodeIdFromUser(const std::string& prompt, int maxId) {
 }
 
 // Imprime la ruta al terminal
-void PrintPathToTerminal(const SimpleList<int>& p) {
+void PrintPathToTerminal(const List<int>& p) {
   if (!p.empty()) {
     std::cout << "Ruta encontrada: ";
     bool first = true;

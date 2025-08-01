@@ -12,8 +12,8 @@ float calculateHeuristic(const Graph& graph, int nodeId1, int nodeId2) {
   return Vector2Distance(n1.position, n2.position);
 }
 
-SimpleList<int> reconstructPath(const Graph& graph,
-                                SimpleMap<int, int> cameFrom, int currentId) {
+List<int> reconstructPath(const Graph& graph, SimpleMap<int, int> cameFrom,
+                          int currentId) {
   auto it = cameFrom.find(currentId);
   if (!it) {
     std::cout << "No se puede reconstruir el camino desde nodo " << currentId
@@ -21,7 +21,7 @@ SimpleList<int> reconstructPath(const Graph& graph,
     return {};
   }
 
-  SimpleList<int> totalPath;
+  List<int> totalPath;
   while (true) {
     totalPath.push_front(currentId);
     auto it = cameFrom.find(currentId);
@@ -34,8 +34,8 @@ SimpleList<int> reconstructPath(const Graph& graph,
 }
 } // namespace
 
-SimpleList<int> Pathfinding::findPath(const Graph& graph, int startNodeId,
-                                      int endNodeId) {
+List<int> Pathfinding::findPath(const Graph& graph, int startNodeId,
+                                int endNodeId) {
   int numNodes = graph.getNumNodes();
   if (startNodeId < 0 || startNodeId >= numNodes || endNodeId < 0 ||
       endNodeId >= numNodes) {
