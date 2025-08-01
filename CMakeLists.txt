@@ -40,6 +40,7 @@ set(PROJECT_SOURCES
   src/Graph.cpp
   src/Pathfinding.cpp
   src/Utils.cpp
+  src/App.cpp
   main.cpp
 )
 
