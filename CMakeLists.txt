@@ -40,8 +40,9 @@ set(PROJECT_SOURCES
   src/Graph.cpp
   src/Pathfinding.cpp
   src/Utils.cpp
-  src/main.cpp
+  main.cpp
 )
 
 add_executable(${PROJECT_NAME} ${PROJECT_SOURCES})
 target_link_libraries(${PROJECT_NAME} PRIVATE raylib raylib_cpp)
+target_include_directories(${PROJECT_NAME} PRIVATE include)
