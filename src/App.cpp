@@ -23,6 +23,7 @@ char obstacleNameInput[64] = "";
 bool typingObstacleName = false;
 Rectangle nameInputBox = {10, (float)SCREEN_HEIGHT - 40, 200, 30};
 
+template <Algorithm alg>
 void HandleGraphicalInput() {
   if (IsKeyPressed(KEY_O)) {
     editingObstacles = !editingObstacles;
@@ -116,7 +117,7 @@ void HandleGraphicalInput() {
         obstacleNameInput[0] = '\0';
 
         if (startNodeId != -1 && endNodeId != -1) {
-          path = Pathfinding::findPath(graph, startNodeId, endNodeId);
+          path = Pathfinding::findPath<alg>(graph, startNodeId, endNodeId);
         }
       }
     }
@@ -136,7 +137,7 @@ void HandleGraphicalInput() {
           graph.removeObstacle(i);
 
           if (startNodeId != -1 && endNodeId != -1) {
-            path = Pathfinding::findPath(graph, startNodeId, endNodeId);
+            path = Pathfinding::findPath<alg>(graph, startNodeId, endNodeId);
           }
           break;
         }
@@ -144,7 +145,6 @@ void HandleGraphicalInput() {
     }
 
   } else {
-
     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
       raylib::Vector2 mouseScreenPos = GetMousePosition();
       raylib::Vector2 mouseWorldPos =
@@ -161,7 +161,7 @@ void HandleGraphicalInput() {
 
           endNodeId = clickedNodeId;
 
-          path = Pathfinding::findPath(graph, startNodeId, endNodeId);
+          path = Pathfinding::findPath<alg>(graph, startNodeId, endNodeId);
         } else {
 
           startNodeId = clickedNodeId;
@@ -173,7 +173,7 @@ void HandleGraphicalInput() {
 
     if (IsKeyPressed(KEY_R)) {
       if (startNodeId != -1 && endNodeId != -1) {
-        path = Pathfinding::findPath(graph, startNodeId, endNodeId);
+        path = Pathfinding::findPath<alg>(graph, startNodeId, endNodeId);
       }
     }
 
@@ -303,6 +303,7 @@ int GetValidNodeIdFromUser(const std::string& prompt, int maxId) {
   return nodeId;
 }
 
+template <Algorithm alg>
 void UpdateApplication() {
   if (IsMouseButtonDown(MOUSE_BUTTON_RIGHT)) {
     raylib::Vector2 delta = GetMouseDelta();
@@ -327,7 +328,7 @@ void UpdateApplication() {
     camera.target = (raylib::Vector2)camera.target - zoomCorrection;
   }
 
-  HandleGraphicalInput();
+  HandleGraphicalInput<alg>();
 }
 
 void DrawApplication() {
@@ -442,13 +443,18 @@ void InitializeApplication(int numNodes) {
   }
 }
 
+template <Algorithm alg>
 void RunGraphicalMode() {
   while (!WindowShouldClose()) {
-    UpdateApplication();
+    UpdateApplication<alg>();
     DrawApplication();
   }
 }
+template void RunGraphicalMode<Algorithm::AStar>();
+template void RunGraphicalMode<Algorithm::Bfs>();
+template void RunGraphicalMode<Algorithm::Dijkstra>();
 
+template <Algorithm alg>
 void RunTerminalMode() {
   std::string command;
   int sNode = -1, eNode = -1;
@@ -481,7 +487,7 @@ void RunTerminalMode() {
       std::cout << "Buscando ruta de " << sNode << " a " << eNode << "..."
                 << std::endl;
       auto startTime = std::chrono::high_resolution_clock::now();
-      List<int> terminalPath = Pathfinding::findPath(graph, sNode, eNode);
+      List<int> terminalPath = Pathfinding::findPath<alg>(graph, sNode, eNode);
       auto endTime = std::chrono::high_resolution_clock::now();
       std::chrono::duration<double> elapsed = endTime - startTime;
 
@@ -515,6 +521,10 @@ void RunTerminalMode() {
   } while (command != "salir");
   std::cout << "Saliendo del modo terminal." << std::endl;
 }
+
+template void RunTerminalMode<Algorithm::AStar>();
+template void RunTerminalMode<Algorithm::Bfs>();
+template void RunTerminalMode<Algorithm::Dijkstra>();
 
 void CleanupApplication() {
   if (graphicalMode)

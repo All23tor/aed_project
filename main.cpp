@@ -1,4 +1,5 @@
 #include "App.hpp"
+#include "Pathfinding.hpp"
 #include <iostream>
 
 int main() {
@@ -18,10 +19,34 @@ int main() {
   }
   std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
+  int algorithm = 0;
+  std::cout << "Elegir algoritmo: A* (0), BFS(1) Dijkstra(2): ";
+  std::cin >> algorithm;
+  std::cout << "Se ha elegido el algoritmo: "
+            << (algorithm == 1   ? "BFS"
+                : algorithm == 2 ? "Dijkstra"
+                                 : "A*")
+            << '\n';
+
   InitializeApplication(numNodes);
-  if (graphicalMode)
-    RunGraphicalMode();
-  else
-    RunTerminalMode();
+  switch (algorithm) {
+  case 1:
+    if (graphicalMode)
+      RunGraphicalMode<Algorithm::Bfs>();
+    else
+      RunTerminalMode<Algorithm::Bfs>();
+    break;
+  case 2:
+    if (graphicalMode)
+      RunGraphicalMode<Algorithm::Dijkstra>();
+    else
+      RunTerminalMode<Algorithm::Dijkstra>();
+    break;
+  default:
+    if (graphicalMode)
+      RunGraphicalMode<Algorithm::AStar>();
+    else
+      RunTerminalMode<Algorithm::AStar>();
+  }
   CleanupApplication();
 }

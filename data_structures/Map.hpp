@@ -4,7 +4,7 @@
 #include "Vector.hpp"
 
 template <typename K, typename V>
-class SimpleMap {
+class Map {
 private:
   Vector<Pair<K, V>> data;
 
