@@ -92,13 +92,6 @@ all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/build/CMakeFiles 0
 .PHONY : all
 
-# The main codegen target
-codegen: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/build/CMakeFiles /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 codegen
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/build/CMakeFiles 0
-.PHONY : codegen
-
 # The main clean target
 clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
@@ -136,101 +129,173 @@ RayPathFinderApp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/build
 .PHONY : RayPathFinderApp/fast
 
-src/Graph.o: src/Graph.cpp.o
-.PHONY : src/Graph.o
+src/RayPathApp/AStarStrategy.o: src/RayPathApp/AStarStrategy.cpp.o
+.PHONY : src/RayPathApp/AStarStrategy.o
 
 # target to build an object file
-src/Graph.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/Graph.cpp.o
-.PHONY : src/Graph.cpp.o
+src/RayPathApp/AStarStrategy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/AStarStrategy.cpp.o
+.PHONY : src/RayPathApp/AStarStrategy.cpp.o
 
-src/Graph.i: src/Graph.cpp.i
-.PHONY : src/Graph.i
+src/RayPathApp/AStarStrategy.i: src/RayPathApp/AStarStrategy.cpp.i
+.PHONY : src/RayPathApp/AStarStrategy.i
 
 # target to preprocess a source file
-src/Graph.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/Graph.cpp.i
-.PHONY : src/Graph.cpp.i
+src/RayPathApp/AStarStrategy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/AStarStrategy.cpp.i
+.PHONY : src/RayPathApp/AStarStrategy.cpp.i
 
-src/Graph.s: src/Graph.cpp.s
-.PHONY : src/Graph.s
+src/RayPathApp/AStarStrategy.s: src/RayPathApp/AStarStrategy.cpp.s
+.PHONY : src/RayPathApp/AStarStrategy.s
 
 # target to generate assembly for a file
-src/Graph.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/Graph.cpp.s
-.PHONY : src/Graph.cpp.s
+src/RayPathApp/AStarStrategy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/AStarStrategy.cpp.s
+.PHONY : src/RayPathApp/AStarStrategy.cpp.s
 
-src/Pathfinding.o: src/Pathfinding.cpp.o
-.PHONY : src/Pathfinding.o
+src/RayPathApp/Application.o: src/RayPathApp/Application.cpp.o
+.PHONY : src/RayPathApp/Application.o
 
 # target to build an object file
-src/Pathfinding.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/Pathfinding.cpp.o
-.PHONY : src/Pathfinding.cpp.o
+src/RayPathApp/Application.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Application.cpp.o
+.PHONY : src/RayPathApp/Application.cpp.o
 
-src/Pathfinding.i: src/Pathfinding.cpp.i
-.PHONY : src/Pathfinding.i
+src/RayPathApp/Application.i: src/RayPathApp/Application.cpp.i
+.PHONY : src/RayPathApp/Application.i
 
 # target to preprocess a source file
-src/Pathfinding.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/Pathfinding.cpp.i
-.PHONY : src/Pathfinding.cpp.i
+src/RayPathApp/Application.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Application.cpp.i
+.PHONY : src/RayPathApp/Application.cpp.i
 
-src/Pathfinding.s: src/Pathfinding.cpp.s
-.PHONY : src/Pathfinding.s
+src/RayPathApp/Application.s: src/RayPathApp/Application.cpp.s
+.PHONY : src/RayPathApp/Application.s
 
 # target to generate assembly for a file
-src/Pathfinding.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/Pathfinding.cpp.s
-.PHONY : src/Pathfinding.cpp.s
+src/RayPathApp/Application.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Application.cpp.s
+.PHONY : src/RayPathApp/Application.cpp.s
 
-src/Utils.o: src/Utils.cpp.o
-.PHONY : src/Utils.o
+src/RayPathApp/DijkstraStrategy.o: src/RayPathApp/DijkstraStrategy.cpp.o
+.PHONY : src/RayPathApp/DijkstraStrategy.o
 
 # target to build an object file
-src/Utils.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/Utils.cpp.o
-.PHONY : src/Utils.cpp.o
+src/RayPathApp/DijkstraStrategy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/DijkstraStrategy.cpp.o
+.PHONY : src/RayPathApp/DijkstraStrategy.cpp.o
 
-src/Utils.i: src/Utils.cpp.i
-.PHONY : src/Utils.i
+src/RayPathApp/DijkstraStrategy.i: src/RayPathApp/DijkstraStrategy.cpp.i
+.PHONY : src/RayPathApp/DijkstraStrategy.i
 
 # target to preprocess a source file
-src/Utils.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/Utils.cpp.i
-.PHONY : src/Utils.cpp.i
+src/RayPathApp/DijkstraStrategy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/DijkstraStrategy.cpp.i
+.PHONY : src/RayPathApp/DijkstraStrategy.cpp.i
 
-src/Utils.s: src/Utils.cpp.s
-.PHONY : src/Utils.s
+src/RayPathApp/DijkstraStrategy.s: src/RayPathApp/DijkstraStrategy.cpp.s
+.PHONY : src/RayPathApp/DijkstraStrategy.s
 
 # target to generate assembly for a file
-src/Utils.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/Utils.cpp.s
-.PHONY : src/Utils.cpp.s
+src/RayPathApp/DijkstraStrategy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/DijkstraStrategy.cpp.s
+.PHONY : src/RayPathApp/DijkstraStrategy.cpp.s
 
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
+src/RayPathApp/Graph.o: src/RayPathApp/Graph.cpp.o
+.PHONY : src/RayPathApp/Graph.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+src/RayPathApp/Graph.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Graph.cpp.o
+.PHONY : src/RayPathApp/Graph.cpp.o
 
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
+src/RayPathApp/Graph.i: src/RayPathApp/Graph.cpp.i
+.PHONY : src/RayPathApp/Graph.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+src/RayPathApp/Graph.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Graph.cpp.i
+.PHONY : src/RayPathApp/Graph.cpp.i
 
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
+src/RayPathApp/Graph.s: src/RayPathApp/Graph.cpp.s
+.PHONY : src/RayPathApp/Graph.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+src/RayPathApp/Graph.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Graph.cpp.s
+.PHONY : src/RayPathApp/Graph.cpp.s
+
+src/RayPathApp/Pathfinding.o: src/RayPathApp/Pathfinding.cpp.o
+.PHONY : src/RayPathApp/Pathfinding.o
+
+# target to build an object file
+src/RayPathApp/Pathfinding.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Pathfinding.cpp.o
+.PHONY : src/RayPathApp/Pathfinding.cpp.o
+
+src/RayPathApp/Pathfinding.i: src/RayPathApp/Pathfinding.cpp.i
+.PHONY : src/RayPathApp/Pathfinding.i
+
+# target to preprocess a source file
+src/RayPathApp/Pathfinding.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Pathfinding.cpp.i
+.PHONY : src/RayPathApp/Pathfinding.cpp.i
+
+src/RayPathApp/Pathfinding.s: src/RayPathApp/Pathfinding.cpp.s
+.PHONY : src/RayPathApp/Pathfinding.s
+
+# target to generate assembly for a file
+src/RayPathApp/Pathfinding.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Pathfinding.cpp.s
+.PHONY : src/RayPathApp/Pathfinding.cpp.s
+
+src/RayPathApp/Utils.o: src/RayPathApp/Utils.cpp.o
+.PHONY : src/RayPathApp/Utils.o
+
+# target to build an object file
+src/RayPathApp/Utils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Utils.cpp.o
+.PHONY : src/RayPathApp/Utils.cpp.o
+
+src/RayPathApp/Utils.i: src/RayPathApp/Utils.cpp.i
+.PHONY : src/RayPathApp/Utils.i
+
+# target to preprocess a source file
+src/RayPathApp/Utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Utils.cpp.i
+.PHONY : src/RayPathApp/Utils.cpp.i
+
+src/RayPathApp/Utils.s: src/RayPathApp/Utils.cpp.s
+.PHONY : src/RayPathApp/Utils.s
+
+# target to generate assembly for a file
+src/RayPathApp/Utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Utils.cpp.s
+.PHONY : src/RayPathApp/Utils.cpp.s
+
+src/RayPathApp/main.o: src/RayPathApp/main.cpp.o
+.PHONY : src/RayPathApp/main.o
+
+# target to build an object file
+src/RayPathApp/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/main.cpp.o
+.PHONY : src/RayPathApp/main.cpp.o
+
+src/RayPathApp/main.i: src/RayPathApp/main.cpp.i
+.PHONY : src/RayPathApp/main.i
+
+# target to preprocess a source file
+src/RayPathApp/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/main.cpp.i
+.PHONY : src/RayPathApp/main.cpp.i
+
+src/RayPathApp/main.s: src/RayPathApp/main.cpp.s
+.PHONY : src/RayPathApp/main.s
+
+# target to generate assembly for a file
+src/RayPathApp/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayPathFinderApp.dir/build.make CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/main.cpp.s
+.PHONY : src/RayPathApp/main.cpp.s
 
 # Help Target
 help:
@@ -238,22 +303,30 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... codegen"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... RayPathFinderApp"
-	@echo "... src/Graph.o"
-	@echo "... src/Graph.i"
-	@echo "... src/Graph.s"
-	@echo "... src/Pathfinding.o"
-	@echo "... src/Pathfinding.i"
-	@echo "... src/Pathfinding.s"
-	@echo "... src/Utils.o"
-	@echo "... src/Utils.i"
-	@echo "... src/Utils.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... src/RayPathApp/AStarStrategy.o"
+	@echo "... src/RayPathApp/AStarStrategy.i"
+	@echo "... src/RayPathApp/AStarStrategy.s"
+	@echo "... src/RayPathApp/Application.o"
+	@echo "... src/RayPathApp/Application.i"
+	@echo "... src/RayPathApp/Application.s"
+	@echo "... src/RayPathApp/DijkstraStrategy.o"
+	@echo "... src/RayPathApp/DijkstraStrategy.i"
+	@echo "... src/RayPathApp/DijkstraStrategy.s"
+	@echo "... src/RayPathApp/Graph.o"
+	@echo "... src/RayPathApp/Graph.i"
+	@echo "... src/RayPathApp/Graph.s"
+	@echo "... src/RayPathApp/Pathfinding.o"
+	@echo "... src/RayPathApp/Pathfinding.i"
+	@echo "... src/RayPathApp/Pathfinding.s"
+	@echo "... src/RayPathApp/Utils.o"
+	@echo "... src/RayPathApp/Utils.i"
+	@echo "... src/RayPathApp/Utils.s"
+	@echo "... src/RayPathApp/main.o"
+	@echo "... src/RayPathApp/main.i"
+	@echo "... src/RayPathApp/main.s"
 .PHONY : help
 
 

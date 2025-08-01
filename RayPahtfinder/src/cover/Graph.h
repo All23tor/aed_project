@@ -22,18 +22,19 @@ public:
     
     void generateRandomObstacles(int count, int maxWidth, int maxHeight);
     const MyVector<Obstacle>& getObstacles() const; //salida de los obstaculos
-
+    
     void clear();
     void addObstacle(const Obstacle& obs);
     void removeObstacle(int index); 
     bool areNodesWithinObstacle(int nodeId1, int nodeId2) const;
     size_t getEstimatedMemoryUsage() const;
+    bool isValidNodeId(int id) const;
                                                                 
 
 private:
     MyVector<Node> nodes;
     MyVector<MyVector<Pair<int, float>>> adjacencyList;
-    bool isValidNodeId(int id) const;
+    
     MyVector<Obstacle> obstacles;
 
     MyVector<MyVector<MyVector<int>>> spatialGrid;

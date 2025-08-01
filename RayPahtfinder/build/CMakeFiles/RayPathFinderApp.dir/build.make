@@ -72,81 +72,129 @@ include CMakeFiles/RayPathFinderApp.dir/flags.make
 CMakeFiles/RayPathFinderApp.dir/codegen:
 .PHONY : CMakeFiles/RayPathFinderApp.dir/codegen
 
-CMakeFiles/RayPathFinderApp.dir/src/main.cpp.o: CMakeFiles/RayPathFinderApp.dir/flags.make
-CMakeFiles/RayPathFinderApp.dir/src/main.cpp.o: /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/main.cpp
-CMakeFiles/RayPathFinderApp.dir/src/main.cpp.o: CMakeFiles/RayPathFinderApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/RayPathFinderApp.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayPathFinderApp.dir/src/main.cpp.o -MF CMakeFiles/RayPathFinderApp.dir/src/main.cpp.o.d -o CMakeFiles/RayPathFinderApp.dir/src/main.cpp.o -c /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/main.cpp
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/main.cpp.o: CMakeFiles/RayPathFinderApp.dir/flags.make
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/main.cpp.o: /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/RayPathApp/main.cpp
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/main.cpp.o: CMakeFiles/RayPathFinderApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/main.cpp.o -MF CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/main.cpp.o.d -o CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/main.cpp.o -c /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/RayPathApp/main.cpp
 
-CMakeFiles/RayPathFinderApp.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RayPathFinderApp.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/main.cpp > CMakeFiles/RayPathFinderApp.dir/src/main.cpp.i
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/RayPathApp/main.cpp > CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/main.cpp.i
 
-CMakeFiles/RayPathFinderApp.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RayPathFinderApp.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/main.cpp -o CMakeFiles/RayPathFinderApp.dir/src/main.cpp.s
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/RayPathApp/main.cpp -o CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/main.cpp.s
 
-CMakeFiles/RayPathFinderApp.dir/src/Graph.cpp.o: CMakeFiles/RayPathFinderApp.dir/flags.make
-CMakeFiles/RayPathFinderApp.dir/src/Graph.cpp.o: /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/Graph.cpp
-CMakeFiles/RayPathFinderApp.dir/src/Graph.cpp.o: CMakeFiles/RayPathFinderApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/RayPathFinderApp.dir/src/Graph.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayPathFinderApp.dir/src/Graph.cpp.o -MF CMakeFiles/RayPathFinderApp.dir/src/Graph.cpp.o.d -o CMakeFiles/RayPathFinderApp.dir/src/Graph.cpp.o -c /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/Graph.cpp
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Application.cpp.o: CMakeFiles/RayPathFinderApp.dir/flags.make
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Application.cpp.o: /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/RayPathApp/Application.cpp
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Application.cpp.o: CMakeFiles/RayPathFinderApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Application.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Application.cpp.o -MF CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Application.cpp.o.d -o CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Application.cpp.o -c /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/RayPathApp/Application.cpp
 
-CMakeFiles/RayPathFinderApp.dir/src/Graph.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RayPathFinderApp.dir/src/Graph.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/Graph.cpp > CMakeFiles/RayPathFinderApp.dir/src/Graph.cpp.i
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Application.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Application.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/RayPathApp/Application.cpp > CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Application.cpp.i
 
-CMakeFiles/RayPathFinderApp.dir/src/Graph.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RayPathFinderApp.dir/src/Graph.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/Graph.cpp -o CMakeFiles/RayPathFinderApp.dir/src/Graph.cpp.s
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Application.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Application.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/RayPathApp/Application.cpp -o CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Application.cpp.s
 
-CMakeFiles/RayPathFinderApp.dir/src/Pathfinding.cpp.o: CMakeFiles/RayPathFinderApp.dir/flags.make
-CMakeFiles/RayPathFinderApp.dir/src/Pathfinding.cpp.o: /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/Pathfinding.cpp
-CMakeFiles/RayPathFinderApp.dir/src/Pathfinding.cpp.o: CMakeFiles/RayPathFinderApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/RayPathFinderApp.dir/src/Pathfinding.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayPathFinderApp.dir/src/Pathfinding.cpp.o -MF CMakeFiles/RayPathFinderApp.dir/src/Pathfinding.cpp.o.d -o CMakeFiles/RayPathFinderApp.dir/src/Pathfinding.cpp.o -c /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/Pathfinding.cpp
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Graph.cpp.o: CMakeFiles/RayPathFinderApp.dir/flags.make
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Graph.cpp.o: /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/RayPathApp/Graph.cpp
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Graph.cpp.o: CMakeFiles/RayPathFinderApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Graph.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Graph.cpp.o -MF CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Graph.cpp.o.d -o CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Graph.cpp.o -c /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/RayPathApp/Graph.cpp
 
-CMakeFiles/RayPathFinderApp.dir/src/Pathfinding.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RayPathFinderApp.dir/src/Pathfinding.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/Pathfinding.cpp > CMakeFiles/RayPathFinderApp.dir/src/Pathfinding.cpp.i
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Graph.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Graph.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/RayPathApp/Graph.cpp > CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Graph.cpp.i
 
-CMakeFiles/RayPathFinderApp.dir/src/Pathfinding.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RayPathFinderApp.dir/src/Pathfinding.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/Pathfinding.cpp -o CMakeFiles/RayPathFinderApp.dir/src/Pathfinding.cpp.s
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Graph.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Graph.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/RayPathApp/Graph.cpp -o CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Graph.cpp.s
 
-CMakeFiles/RayPathFinderApp.dir/src/Utils.cpp.o: CMakeFiles/RayPathFinderApp.dir/flags.make
-CMakeFiles/RayPathFinderApp.dir/src/Utils.cpp.o: /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/Utils.cpp
-CMakeFiles/RayPathFinderApp.dir/src/Utils.cpp.o: CMakeFiles/RayPathFinderApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/RayPathFinderApp.dir/src/Utils.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayPathFinderApp.dir/src/Utils.cpp.o -MF CMakeFiles/RayPathFinderApp.dir/src/Utils.cpp.o.d -o CMakeFiles/RayPathFinderApp.dir/src/Utils.cpp.o -c /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/Utils.cpp
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Pathfinding.cpp.o: CMakeFiles/RayPathFinderApp.dir/flags.make
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Pathfinding.cpp.o: /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/RayPathApp/Pathfinding.cpp
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Pathfinding.cpp.o: CMakeFiles/RayPathFinderApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Pathfinding.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Pathfinding.cpp.o -MF CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Pathfinding.cpp.o.d -o CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Pathfinding.cpp.o -c /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/RayPathApp/Pathfinding.cpp
 
-CMakeFiles/RayPathFinderApp.dir/src/Utils.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RayPathFinderApp.dir/src/Utils.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/Utils.cpp > CMakeFiles/RayPathFinderApp.dir/src/Utils.cpp.i
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Pathfinding.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Pathfinding.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/RayPathApp/Pathfinding.cpp > CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Pathfinding.cpp.i
 
-CMakeFiles/RayPathFinderApp.dir/src/Utils.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RayPathFinderApp.dir/src/Utils.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/Utils.cpp -o CMakeFiles/RayPathFinderApp.dir/src/Utils.cpp.s
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Pathfinding.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Pathfinding.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/RayPathApp/Pathfinding.cpp -o CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Pathfinding.cpp.s
+
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Utils.cpp.o: CMakeFiles/RayPathFinderApp.dir/flags.make
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Utils.cpp.o: /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/RayPathApp/Utils.cpp
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Utils.cpp.o: CMakeFiles/RayPathFinderApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Utils.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Utils.cpp.o -MF CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Utils.cpp.o.d -o CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Utils.cpp.o -c /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/RayPathApp/Utils.cpp
+
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Utils.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/RayPathApp/Utils.cpp > CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Utils.cpp.i
+
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Utils.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/RayPathApp/Utils.cpp -o CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Utils.cpp.s
+
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/DijkstraStrategy.cpp.o: CMakeFiles/RayPathFinderApp.dir/flags.make
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/DijkstraStrategy.cpp.o: /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/RayPathApp/DijkstraStrategy.cpp
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/DijkstraStrategy.cpp.o: CMakeFiles/RayPathFinderApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/DijkstraStrategy.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/DijkstraStrategy.cpp.o -MF CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/DijkstraStrategy.cpp.o.d -o CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/DijkstraStrategy.cpp.o -c /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/RayPathApp/DijkstraStrategy.cpp
+
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/DijkstraStrategy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/DijkstraStrategy.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/RayPathApp/DijkstraStrategy.cpp > CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/DijkstraStrategy.cpp.i
+
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/DijkstraStrategy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/DijkstraStrategy.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/RayPathApp/DijkstraStrategy.cpp -o CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/DijkstraStrategy.cpp.s
+
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/AStarStrategy.cpp.o: CMakeFiles/RayPathFinderApp.dir/flags.make
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/AStarStrategy.cpp.o: /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/RayPathApp/AStarStrategy.cpp
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/AStarStrategy.cpp.o: CMakeFiles/RayPathFinderApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/AStarStrategy.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/AStarStrategy.cpp.o -MF CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/AStarStrategy.cpp.o.d -o CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/AStarStrategy.cpp.o -c /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/RayPathApp/AStarStrategy.cpp
+
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/AStarStrategy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/AStarStrategy.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/RayPathApp/AStarStrategy.cpp > CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/AStarStrategy.cpp.i
+
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/AStarStrategy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/AStarStrategy.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/src/RayPathApp/AStarStrategy.cpp -o CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/AStarStrategy.cpp.s
 
 # Object files for target RayPathFinderApp
 RayPathFinderApp_OBJECTS = \
-"CMakeFiles/RayPathFinderApp.dir/src/main.cpp.o" \
-"CMakeFiles/RayPathFinderApp.dir/src/Graph.cpp.o" \
-"CMakeFiles/RayPathFinderApp.dir/src/Pathfinding.cpp.o" \
-"CMakeFiles/RayPathFinderApp.dir/src/Utils.cpp.o"
+"CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/main.cpp.o" \
+"CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Application.cpp.o" \
+"CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Graph.cpp.o" \
+"CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Pathfinding.cpp.o" \
+"CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Utils.cpp.o" \
+"CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/DijkstraStrategy.cpp.o" \
+"CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/AStarStrategy.cpp.o"
 
 # External object files for target RayPathFinderApp
 RayPathFinderApp_EXTERNAL_OBJECTS =
 
-RayPathFinderApp: CMakeFiles/RayPathFinderApp.dir/src/main.cpp.o
-RayPathFinderApp: CMakeFiles/RayPathFinderApp.dir/src/Graph.cpp.o
-RayPathFinderApp: CMakeFiles/RayPathFinderApp.dir/src/Pathfinding.cpp.o
-RayPathFinderApp: CMakeFiles/RayPathFinderApp.dir/src/Utils.cpp.o
+RayPathFinderApp: CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/main.cpp.o
+RayPathFinderApp: CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Application.cpp.o
+RayPathFinderApp: CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Graph.cpp.o
+RayPathFinderApp: CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Pathfinding.cpp.o
+RayPathFinderApp: CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Utils.cpp.o
+RayPathFinderApp: CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/DijkstraStrategy.cpp.o
+RayPathFinderApp: CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/AStarStrategy.cpp.o
 RayPathFinderApp: CMakeFiles/RayPathFinderApp.dir/build.make
 RayPathFinderApp: CMakeFiles/RayPathFinderApp.dir/compiler_depend.ts
 RayPathFinderApp: /usr/lib/libraylib.so
 RayPathFinderApp: CMakeFiles/RayPathFinderApp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable RayPathFinderApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/arthurm/Documentos/AED/proyecto/TIF_AED/RayPahtfinder/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable RayPathFinderApp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RayPathFinderApp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

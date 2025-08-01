@@ -2,10 +2,13 @@ RayPathFinderApp: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/../../../../lib/Scrt1.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/../../../../lib/crti.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/crtbeginS.o \
-  CMakeFiles/RayPathFinderApp.dir/src/main.cpp.o \
-  CMakeFiles/RayPathFinderApp.dir/src/Graph.cpp.o \
-  CMakeFiles/RayPathFinderApp.dir/src/Pathfinding.cpp.o \
-  CMakeFiles/RayPathFinderApp.dir/src/Utils.cpp.o \
+  CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/main.cpp.o \
+  CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Application.cpp.o \
+  CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Graph.cpp.o \
+  CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Pathfinding.cpp.o \
+  CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Utils.cpp.o \
+  CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/DijkstraStrategy.cpp.o \
+  CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/AStarStrategy.cpp.o \
   /usr/lib/libraylib.so \
   /usr/lib/libraylib.so \
   /usr/lib/libstdc++.so \
@@ -42,13 +45,19 @@ RayPathFinderApp: \
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/crtbeginS.o:
 
-CMakeFiles/RayPathFinderApp.dir/src/main.cpp.o:
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/main.cpp.o:
 
-CMakeFiles/RayPathFinderApp.dir/src/Graph.cpp.o:
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Application.cpp.o:
 
-CMakeFiles/RayPathFinderApp.dir/src/Pathfinding.cpp.o:
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Graph.cpp.o:
 
-CMakeFiles/RayPathFinderApp.dir/src/Utils.cpp.o:
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Pathfinding.cpp.o:
+
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/Utils.cpp.o:
+
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/DijkstraStrategy.cpp.o:
+
+CMakeFiles/RayPathFinderApp.dir/src/RayPathApp/AStarStrategy.cpp.o:
 
 /usr/lib/libraylib.so:
 

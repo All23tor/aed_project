@@ -1,57 +1,56 @@
 #pragma once
 
-#include "raylib-cpp.hpp"
-#include "Estructuras_datos/list.h"
-#include "Graph.h"
-#include "Node.h"
+#include "IInitializer.h"
+#include "GraphicalInitializer.h"
+#include "TerminalInitializer.h"
+#include "Estructuras_datos/MyVector.h"
+#include "Constants.h"
+#include "IPathfindingStrategy.h"
 #include "Pathfinding.h"
-#include "Obstacle.h"    
-#include <string>
+#include "DijkstraStrategy.h" 
+#include "AStarStrategy.h"
+#include <memory>
+#include <iostream>
 
 class Application {
 public:
-    Application(int numNodes);
+    // El constructor inicia el modo y el algoritmo
+    explicit Application(int numNodes);
     ~Application();
     void Run();
 
 private:
-    // Variables de estado del programa
+    // Punteros a los "estrategas"
+    std::unique_ptr<IInitializer> initializer;
+    std::unique_ptr<Pathfinding> myPathfinding;
+    
+    // El resto de los miembros de la aplicación
     Graph myGraph;
-    Pathfinding* myPathfinding = nullptr;
+    bool graphicalMode;
+
+    // Variables de estado del pathfinding
+    SimpleList<int> path;
     int startNodeId = -1;
     int endNodeId = -1;
-    SimpleList<int> path;
-    raylib::Camera2D camera;
-    bool graphicalMode = true;
 
-    // Variables para la edición de obstáculos
+    // Variables de estado del modo gráfico
     bool editingObstacles = false;
-    raylib::Vector2 startDragPos;
     bool isDragging = false;
-    char obstacleNameInput[64] = "";
     bool typingObstacleName = false;
-    Rectangle nameInputBox = { 10, (float)SCREEN_HEIGHT - 40, 200, 30 };
-    
-    // Constantes del programa
-    const int SCREEN_WIDTH = 1200;
-    const int SCREEN_HEIGHT = 800;
-    const int GRAPHICAL_NODE_LIMIT = 700;
-    const int NUM_OBSTACLES = 5;
+    char obstacleNameInput[256] = "\0";
+    Vector2 startDragPos = {0, 0};
+    Rectangle nameInputBox = { 10, 270, 250, 25 };
 
-    // Métodos para la lógica principal
-    void initialize();
-    void cleanup();
-    
-    // Métodos para el modo gráfico
+    // Métodos privados para la lógica principal de la aplicación
     void runGraphicalMode();
+    void runTerminalMode();
     void updateGraphicalMode(float deltaTime);
     void drawGraphicalMode();
     void handleGraphicalInput();
-    void drawGraphicalHUD();
     void drawGraphElements();
+    void drawGraphicalHUD();
 
-    // Métodos para el modo terminal
-    void runTerminalMode();
+    // Métodos privados para el modo terminal
     void printPathToTerminal(const SimpleList<int>& p) const;
     int getValidNodeIdFromUser(const std::string& prompt, int maxId) const;
 };

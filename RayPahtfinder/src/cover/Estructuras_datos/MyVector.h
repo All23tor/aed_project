@@ -240,6 +240,13 @@ public:
         std::swap(sz, other.sz);
         std::swap(cap, other.cap);
     }
+    void assign(size_t count, const T& value) {
+    clear();
+    reserve(count); 
+    for (size_t i = 0; i < count; ++i) {
+        push_back(value);  
+    }
+}
 
     size_t size() const { return sz; }
     size_t capacity() const { return cap; }

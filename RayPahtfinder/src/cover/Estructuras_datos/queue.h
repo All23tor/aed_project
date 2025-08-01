@@ -1,16 +1,21 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 
-#include <utility> // para std::pair
+#include "MyVector.h"
+#include <utility> 
 #include <limits>
+#include <stdexcept> 
 
-template <typename T, int CAPACITY = 1000000>
+template <typename T> 
 class PriorityQueue {
 private:
-    T data[CAPACITY];
-    int count;
+   
+    MyVector<T>data;
 
     bool less(int i, int j) const {
+        if (i >= data.size() || j >= data.size()) {
+            return false;
+        }
         return data[i].first < data[j].first;
     }
 
@@ -33,12 +38,12 @@ private:
     }
 
     void siftDown(int index) {
-        while (2 * index + 1 < count) {
+        while (2 * index + 1 < data.size()) {
             int left = 2 * index + 1;
             int right = 2 * index + 2;
             int smallest = left;
 
-            if (right < count && less(right, left)) {
+            if (right < data.size() && less(right, left)) {
                 smallest = right;
             }
 
@@ -51,45 +56,51 @@ private:
         }
     }
 
+
 public:
-    PriorityQueue() : count(0) {}
+    PriorityQueue() = default;
 
     bool empty() const {
-        return count == 0;
+        return data.empty();
     }
 
     bool full() const {
-        return count == CAPACITY;
+        return data.size();
     }
 
-    int size() const {
-        return count;
-    }
 
     void push(const T& value) {
-        if (full()) return; // O lanzar excepción
-        data[count] = value;
-        siftUp(count);
-        ++count;
+        data.push_back(value);
+        siftUp(data.size() - 1);
     }
 
     void pop() {
-        if (empty()) return; // O lanzar excepción
-        data[0] = data[count - 1];
-        --count;
-        siftDown(0);
+        if (empty()) {
+            throw std::out_of_range("Pop en cola de prioridad vacia.");
+        }
+        data[0] = data.back();
+        data.pop_back();
+        if (!empty()) {
+            siftDown(0);
+        }
     }
 
     T& top() {
+        if (empty()) {
+            throw std::out_of_range("Top en cola de prioridad vacia.");
+        }
         return data[0];
     }
 
     const T& top() const {
+        if (empty()) {
+            throw std::out_of_range("Top en cola de prioridad vacia.");
+        }
         return data[0];
     }
 
     void clear() {
-        count = 0;
+        data.clear();
     }
 };
 

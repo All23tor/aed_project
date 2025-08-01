@@ -59,6 +59,13 @@ public:
         }
         ++count;
     }
+    void push_front(const T& value) {
+        Node* newNode = new Node(value);
+        newNode->sgte = head;    
+        head = newNode;
+        if (count == 0) tail = newNode;  
+        ++count;
+    }
 
     void clear() {
         Node* current = head;
@@ -124,4 +131,5 @@ public:
     Iterator end() const {
         return Iterator(nullptr);
     }
+    
 };
