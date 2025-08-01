@@ -1,9 +1,9 @@
-#include "Pathfinding.h"
-#include "MyVector.h"
-#include "SimpleMap.h"
-#include "Utils.h"
-#include "pair.h"
-#include "queue.h"
+#include "Pathfinding.hpp"
+#include "MyVector.hpp"
+#include "SimpleMap.hpp"
+#include "Utils.hpp"
+#include "pair.hpp"
+#include "queue.hpp"
 #include <algorithm>
 #include <limits>
 

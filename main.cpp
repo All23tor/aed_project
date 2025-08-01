@@ -1,8 +1,8 @@
-#include "Graph.h"
-#include "Node.h"
-#include "Obstacle.h"
-#include "Pathfinding.h"
-#include "list.h"
+#include "Graph.hpp"
+#include "Node.hpp"
+#include "Obstacle.hpp"
+#include "Pathfinding.hpp"
+#include "list.hpp"
 #include "raylib-cpp.hpp"
 #include <algorithm>
 #include <chrono>

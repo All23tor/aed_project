@@ -1,8 +1,8 @@
 #pragma once
-#include "MyVector.h"
-#include "Node.h"
-#include "Obstacle.h"
-#include "pair.h"
+#include "MyVector.hpp"
+#include "Node.hpp"
+#include "Obstacle.hpp"
+#include "pair.hpp"
 #include "raylib-cpp.hpp"
 #include <utility>
 

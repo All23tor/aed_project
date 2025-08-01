@@ -1,6 +1,6 @@
-#include "Graph.h"
-#include "MyVector.h"
-#include "pair.h"
+#include "Graph.hpp"
+#include "MyVector.hpp"
+#include "pair.hpp"
 #include <algorithm>
 #include <iostream>
 #include <limits>

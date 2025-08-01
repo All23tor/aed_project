@@ -1,10 +1,10 @@
 #pragma once
 
-#include "Graph.h"
-#include "MyVector.h"
-#include "Node.h"
-#include "SimpleMap.h"
-#include "list.h"
+#include "Graph.hpp"
+#include "MyVector.hpp"
+#include "Node.hpp"
+#include "SimpleMap.hpp"
+#include "list.hpp"
 #include <utility>
 
 class Pathfinding {
