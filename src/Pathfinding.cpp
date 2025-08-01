@@ -40,7 +40,6 @@ List<int> Pathfinding::findPath(const Graph& graph, int startNodeId,
     return {};
   }
 
-  // Reiniciar estructuras internas
   Vector<float> gScore(numNodes, std::numeric_limits<float>::infinity());
   Vector<float> fScore(numNodes, std::numeric_limits<float>::infinity());
   Vector<bool> closedSet(numNodes, false);

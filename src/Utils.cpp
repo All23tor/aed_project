@@ -2,13 +2,6 @@
 #include <iostream>
 
 namespace Utils {
-void ClearInputBuffer() {
-  std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-}
-
-float GetDistance(raylib::Vector2 p1, raylib::Vector2 p2) {
-  return p1.Distance(p2);
-}
 bool CheckLineRectangleCollision(raylib::Vector2 p1, raylib::Vector2 p2,
                                  raylib::Rectangle rec) {
   // Primero, comprobar si alguno de los puntos finales de la línea está dentro
