@@ -1,9 +1,9 @@
 #include "Pathfinding.h"
-#include "Estructuras_datos/MyVector.h"
-#include "Estructuras_datos/SimpleMap.h"
-#include "Estructuras_datos/pair.h"
-#include "Estructuras_datos/queue.h"
+#include "MyVector.h"
+#include "SimpleMap.h"
 #include "Utils.h"
+#include "pair.h"
+#include "queue.h"
 #include <algorithm>
 #include <limits>
 

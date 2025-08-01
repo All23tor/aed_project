@@ -1,6 +1,6 @@
 #include "Graph.h"
-#include "Estructuras_datos/MyVector.h"
-#include "Estructuras_datos/pair.h"
+#include "MyVector.h"
+#include "pair.h"
 #include <algorithm>
 #include <iostream>
 #include <limits>

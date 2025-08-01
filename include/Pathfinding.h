@@ -1,10 +1,10 @@
 #pragma once
 
-#include "Estructuras_datos/MyVector.h"
-#include "Estructuras_datos/SimpleMap.h"
-#include "Estructuras_datos/list.h"
 #include "Graph.h"
+#include "MyVector.h"
 #include "Node.h"
+#include "SimpleMap.h"
+#include "list.h"
 #include <utility>
 
 class Pathfinding {
