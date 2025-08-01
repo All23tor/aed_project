@@ -1,4 +1,5 @@
 #include "Utils.hpp"
+#include <iostream>
 
 namespace Utils {
 void ClearInputBuffer() {

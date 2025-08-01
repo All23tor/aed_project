@@ -1,10 +1,7 @@
 #include "Graph.hpp"
 #include "MyVector.hpp"
 #include "pair.hpp"
-#include <algorithm>
 #include <iostream>
-#include <limits>
-#include <string>
 
 Graph::Graph() : gridCols(0), gridRows(0) {}
 

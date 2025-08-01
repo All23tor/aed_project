@@ -4,7 +4,6 @@
 #include "Obstacle.hpp"
 #include "pair.hpp"
 #include "raylib-cpp.hpp"
-#include <utility>
 
 // Clase que representa el grafo
 class Graph {

@@ -1,9 +1,6 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 
-#include <limits>
-#include <utility> // para std::pair
-
 template <typename T, int CAPACITY = 1000000>
 class PriorityQueue {
 private:

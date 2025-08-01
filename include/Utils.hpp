@@ -1,7 +1,5 @@
 #pragma once
 #include "raylib-cpp.hpp" // Para raylib::Vector2
-#include <iostream>       // Para std::cin, std::cout
-#include <limits>         // Para std::numeric_limits
 
 // Calcula la distancia euclidiana entre dos puntos (Vector2).
 namespace Utils {

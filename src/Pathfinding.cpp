@@ -4,8 +4,6 @@
 #include "Utils.hpp"
 #include "pair.hpp"
 #include "queue.hpp"
-#include <algorithm>
-#include <limits>
 
 Pathfinding::Pathfinding(const Graph& g) : graph(g) {
   int n = g.getNumNodes();
