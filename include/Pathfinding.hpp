@@ -1,15 +1,8 @@
 #pragma once
 
 #include "Graph.hpp"
-#include "List.hpp"
-
-enum class Algorithm {
-  AStar,
-  Bfs,
-  Dijkstra,
-};
+#include <list>
 
 namespace Pathfinding {
-template <Algorithm>
-List<int> findPath(const Graph&, int startNodeId, int endNodeId);
+std::list<int> findPath(const Graph&, int startNodeId, int endNodeId);
 }

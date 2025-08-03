@@ -1,5 +1,4 @@
 #include "Utils.hpp"
-#include <iostream>
 
 namespace Utils {
 bool CheckLineRectangleCollision(raylib::Vector2 p1, raylib::Vector2 p2,
